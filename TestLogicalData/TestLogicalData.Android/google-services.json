@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "79682388135",
+    "project_id": "logicaldatapush",
+    "storage_bucket": "logicaldatapush.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:79682388135:android:84c2238f4ea15aab389b82",
+        "android_client_info": {
+          "package_name": "com.kenny.testlogicaldata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "79682388135-2m7ntgahgif8qsq44g95j9aj07jceobv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7TN8CDWImr2TnRjdVEtf542tg58n9Ha8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "79682388135-2m7ntgahgif8qsq44g95j9aj07jceobv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

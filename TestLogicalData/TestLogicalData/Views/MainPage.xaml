@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:xamanimation="clr-namespace:Xamanimation;assembly=Xamanimation"
+             x:Class="TestLogicalData.MainPage"
+             Visual="Material">
+    <Page.Resources>
+        <ResourceDictionary>
+            <xamanimation:StoryBoard x:Key="FloatingContainerEnter" Target="{x:Reference Container}">
+                <xamanimation:TranslateToAnimation Duration="0" TranslateY="600"/>
+                <xamanimation:TranslateToAnimation TranslateY="0" Easing="SpringOut"/>
+            </xamanimation:StoryBoard>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Page.Triggers>
+        <EventTrigger Event="Appearing">
+            <xamanimation:BeginAnimation Animation="{StaticResource FloatingContainerEnter}"/>
+        </EventTrigger>
+    </Page.Triggers>
+    
+    <Frame>
+        <Frame.Background>
+            <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="1,0">
+                <GradientStop Color="#00d4ff"
+                          Offset="0.1"/>
+                <GradientStop Color="#5273d5"
+                          Offset="0.5"/>
+                <GradientStop Color="#00d4ff"
+                          Offset="1.0"/>
+            </LinearGradientBrush>
+        </Frame.Background>
+        <Frame HeightRequest="350" VerticalOptions="Center" HasShadow="True" BackgroundColor="White" CornerRadius="15" Margin="10" x:Name="Container">
+            <StackLayout VerticalOptions="Start" >
+                <StackLayout.Background>
+                    <SolidColorBrush Color="White"/>
+                </StackLayout.Background>
+                <Image Source="test.png" HorizontalOptions="Center" Margin="0,50,0,0"/>
+                <StackLayout VerticalOptions="Center">
+                    <Button Text="Formulario" Command="{Binding Usuario}" Margin="10,20,10,10" />
+                    <Button Text="Notificación" Command="{Binding NotificacionFirebase}"  Margin="10"/>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </Frame>
+</ContentPage>
